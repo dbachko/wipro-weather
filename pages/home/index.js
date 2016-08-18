@@ -67,14 +67,15 @@ class HomePage extends React.Component {
         if (tmpDay === moment(el.dt_txt).date()) {
           return el;
         }
-      }).filter(n => n);
-    });
+      }).filter(el => el);
+    }).filter(el => el.length);
   }
 
   render() {
     const { store } = this.context;
     const { list } = store.getState();
     const curWeather = list ? list[0] : null;
+    const curTimeFrame = Math.floor(moment().hour() / 3);
     return (
       <Layout className={s.content}>
         {curWeather ?
@@ -89,11 +90,11 @@ class HomePage extends React.Component {
         <div className={`${s.dayWrapper}`}>
           {list ? this.chunkIntoWeekdays(list).map((itm) =>
             <Day
-              key={itm[4].dt}
+              key={itm[curTimeFrame].dt}
               temp={this.getMinMaxTemp(itm)}
-              icon={this.getWeatherIcon(itm[4])}
-              desc={itm[4].weather[0].description}
-              weekday={moment.unix(itm[4].dt).format('dddd')}
+              icon={this.getWeatherIcon(itm[curTimeFrame])}
+              desc={itm[curTimeFrame].weather[0].description}
+              weekday={moment.unix(itm[curTimeFrame].dt).format('dddd')}
             />
           ) : null}
         </div>
