@@ -1,0 +1,35 @@
+/**
+* Custom CSS for DAY component
+*/
+
+.wrapper {
+  margin: 0 3em 0 0;
+}
+
+.weatherBlockWrapper {
+  text-align: center;
+}
+
+.desc {
+  text-transform: capitalize;
+  color: #333;
+}
+
+.temp {
+  font-size: 2em;
+}
+
+.weatherIconWrapper {
+  margin-bottom: 1em;
+}
+
+.weatherIcon {
+  font-size: 3em;
+}
+
+@media screen and (max-width: 599px) {
+  .wrapper {
+    margin: 0;
+    flex-basis: 50%;
+  }
+}

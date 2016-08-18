@@ -1,0 +1,65 @@
+/**
+* React Static Boilerplate
+* https://github.com/kriasoft/react-static-boilerplate
+*
+* Copyright © 2015-present Kriasoft, LLC. All rights reserved.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE.txt file in the root directory of this source tree.
+*/
+
+.row {
+  padding: 40px;
+}
+
+.title {
+  color: #000;
+  text-decoration: none;
+}
+
+.input {
+  color: #000;
+  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.inputActive {
+  outline: none;
+  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.logo {
+  color: #000;
+  font-size: 2em;
+}
+
+.animSpin {
+  animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .header {
+    display: flex;
+  }
+
+  .row {
+    padding: 0 16px;
+  }
+
+}

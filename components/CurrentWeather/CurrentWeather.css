@@ -1,0 +1,18 @@
+/**
+* Custom CSS for CurrentWeather component
+*/
+
+.wrapper {
+  flex-basis: 200px;
+  margin-right: 3em;
+  text-transform: capitalize;
+}
+
+.weatherBlock {
+  font-size: 5em;
+  margin-bottom: 15px;
+}
+
+.weatherIcon {
+  margin-right: 10px;
+}
